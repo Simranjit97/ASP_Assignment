@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - eMusic</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,13 +17,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <img src="~/Content/logo.png" href="@Url.Action("Index", "Home")" id="logo-image"/>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Artists", "Index", "Artists")</li>
+                    <li>@Html.ActionLink("Songs", "Index", "Songs")</li>>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -31,9 +31,9 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <hr />
+            <p>Simranjit 200347471, course name -Server-Side Scripting -ASP.NET -- COMP 2084</p>
         </footer>
     </div>
 
