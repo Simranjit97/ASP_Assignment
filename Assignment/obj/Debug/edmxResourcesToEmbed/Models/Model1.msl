@@ -15,6 +15,7 @@
     <EntitySetMapping Name="Songs">
       <EntityTypeMapping TypeName="Database1Model.Song">
         <MappingFragment StoreEntitySet="Song">
+          <ScalarProperty Name="Year" ColumnName="Year" />
           <ScalarProperty Name="Song_Id" ColumnName="Song_Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Length" ColumnName="Length" />

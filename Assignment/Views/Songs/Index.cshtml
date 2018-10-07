@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Assignment.Models.Song>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Songs";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Songs</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -28,7 +28,10 @@
             @Html.DisplayNameFor(model => model.Genere)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Artist1.Name)
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            Artist
         </th>
         <th></th>
     </tr>
@@ -49,6 +52,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Genere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Artist1.Name)

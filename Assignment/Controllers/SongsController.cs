@@ -48,7 +48,7 @@ namespace Assignment.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Song_Id,Name,Length,Bitrate,Size,Genere,Artist")] Song song)
+        public ActionResult Create([Bind(Include = "Name,Length,Bitrate,Size,Genere,Artist,Year")] Song song)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace Assignment.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Song_Id,Name,Length,Bitrate,Size,Genere,Artist")] Song song)
+        public ActionResult Edit([Bind(Include = "Song_Id,Name,Length,Bitrate,Size,Genere,Artist,Year")] Song song)
         {
             if (ModelState.IsValid)
             {

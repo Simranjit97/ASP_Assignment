@@ -21,6 +21,7 @@ namespace Assignment.Models
         public Nullable<decimal> Size { get; set; }
         public string Genere { get; set; }
         public int Artist { get; set; }
+        public Nullable<int> Year { get; set; }
     
         public virtual Artist Artist1 { get; set; }
     }

@@ -46,7 +46,7 @@ namespace Assignment.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Artist_Id,Name,Birthdate,Country,City")] Artist artist)
+        public ActionResult Create([Bind(Include = "Name,Birthdate,Country,City")] Artist artist)
         {
             if (ModelState.IsValid)
             {

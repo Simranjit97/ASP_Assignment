@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="~/Content/logo.png" href="@Url.Action("Index", "Home")" id="logo-image"/>
+                <img src="~/Content/logo.png" href="@Url.Action("Index", "Home")" id="logo-image" />
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -31,11 +31,10 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <footer>
-            <hr />
-            <p>Simranjit 200347471, course name -Server-Side Scripting -ASP.NET -- COMP 2084</p>
-        </footer>
     </div>
+    <footer>
+        <p>Simranjit 200347471, course name -Server-Side Scripting -ASP.NET -- COMP 2084</p>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -23,6 +23,7 @@
     <Property Name="Genere" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Artist" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Artist1" Relationship="Self.FK__Song__Artist__25869641" FromRole="Song" ToRole="Artist" />
+    <Property Name="Year" Type="Int32" />
   </EntityType>
   <Association Name="FK__Song__Artist__25869641">
     <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
