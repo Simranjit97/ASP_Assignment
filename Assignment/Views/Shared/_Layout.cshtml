@@ -20,10 +20,16 @@
                 <img src="~/Content/logo.png" href="@Url.Action("Index", "Home")" id="logo-image" />
             </div>
             <div class="navbar-collapse collapse">
+                
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Artists", "Index", "Artists")</li>
-                    <li>@Html.ActionLink("Songs", "Index", "Songs")</li>>
+                    @{ if (ViewBag.Auth != null && ViewBag.Auth)
+                        {
+                            <li>@Html.ActionLink("Artists", "Index", "Artists")</li>
+                            <li>@Html.ActionLink("Songs", "Index", "Songs")</li>
+                        }
+                     }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

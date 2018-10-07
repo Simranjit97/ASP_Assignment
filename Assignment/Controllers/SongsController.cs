@@ -10,6 +10,7 @@ using Assignment.Models;
 
 namespace Assignment.Controllers
 {
+    [Authorize]
     public class SongsController : Controller
     {
         private Database1Entities db = new Database1Entities();
