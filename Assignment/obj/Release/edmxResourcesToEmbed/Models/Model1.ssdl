@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Artist">
+    <Key>
+      <PropertyRef Name="Artist_Id" />
+    </Key>
+    <Property Name="Artist_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="Birthdate" Type="date" Nullable="false" />
+    <Property Name="Country" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="City" Type="nchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Song">
+    <Key>
+      <PropertyRef Name="Song_Id" />
+    </Key>
+    <Property Name="Song_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="Length" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Bitrate" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Size" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Genere" Type="nchar" MaxLength="10" />
+    <Property Name="Artist" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" />
+  </EntityType>
+  <Association Name="FK__Song__Artist__4BAC3F29">
+    <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+    <End Role="Song" Type="Self.Song" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artist">
+        <PropertyRef Name="Artist_Id" />
+      </Principal>
+      <Dependent Role="Song">
+        <PropertyRef Name="Artist" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Artist" EntityType="Self.Artist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Song" EntityType="Self.Song" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Song__Artist__4BAC3F29" Association="Self.FK__Song__Artist__4BAC3F29">
+      <End Role="Artist" EntitySet="Artist" />
+      <End Role="Song" EntitySet="Song" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

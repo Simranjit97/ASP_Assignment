@@ -13,10 +13,10 @@ namespace Assignment.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Database1Entities : DbContext
+    public partial class ASP1DataEntities : DbContext
     {
-        public Database1Entities()
-            : base("name=Database1Entities")
+        public ASP1DataEntities()
+            : base("name=ASP1DataEntities")
         {
         }
     

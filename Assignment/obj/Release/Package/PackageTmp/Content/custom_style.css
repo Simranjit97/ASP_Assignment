@@ -1,0 +1,28 @@
+﻿#logo-image {
+    height: 30px;
+    margin-top: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #323232;
+    color: white;
+    height: 40px;
+}
+
+footer p {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.home-image{
+    margin-top: 50px;
+}
+
+.home-description{
+    margin-top:50px;
+    font-size:20px;
+    line-height:23px;
+}

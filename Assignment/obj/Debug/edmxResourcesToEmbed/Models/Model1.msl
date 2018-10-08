@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="ASP1DataEntities">
     <EntitySetMapping Name="Artists">
       <EntityTypeMapping TypeName="Database1Model.Artist">
         <MappingFragment StoreEntitySet="Artist">
@@ -15,7 +15,6 @@
     <EntitySetMapping Name="Songs">
       <EntityTypeMapping TypeName="Database1Model.Song">
         <MappingFragment StoreEntitySet="Song">
-          <ScalarProperty Name="Year" ColumnName="Year" />
           <ScalarProperty Name="Song_Id" ColumnName="Song_Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Length" ColumnName="Length" />
@@ -23,6 +22,7 @@
           <ScalarProperty Name="Size" ColumnName="Size" />
           <ScalarProperty Name="Genere" ColumnName="Genere" />
           <ScalarProperty Name="Artist" ColumnName="Artist" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

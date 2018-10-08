@@ -1,0 +1,2 @@
+C:\Users\Dinushka\source\repos\Assignment\Assignment.Tests\obj\Debug\Assignment.Tests.csprojAssemblyReference.cache
+C:\Users\Dinushka\source\repos\Assignment\Assignment.Tests\obj\Debug\Assignment.Tests.csproj.CoreCompileInputs.cache

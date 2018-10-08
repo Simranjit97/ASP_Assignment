@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACPa9+tnBK0CGIoJlMdH1HAAAAAACAAAAAAAQZgAAAAEAACAAAACoOWKxtEORe9EHZ8R1P7mI4/N4gKYPCRsO0xe/0cr3egAAAAAOgAAAAAIAACAAAABgZmMH13gtcdg5Ge/nFwU4kyOJLoidVx7BlqLNuv53L4AAAAALbIU2Osc9u6EhM9nuXmRqkMCz5MCfN3iTw/iG+cVubb+JohnLjNdNIqzZfEXjuztYrmxRodKB3RIvJmqq8DBxNDWw7iUKJKJ6NjZKrq+AVfenQ50RuOWixWmj50vMnbI44O23PaY/dkfuxDA6ihbwvAzLvmxtXgOnwKrDxJ0M6kAAAADbeDJ/7bKG/Mah0y+kgdAjmL/OkCJHjn9MUtwA563JLy2C4WYVEqxnF4Zck2bvobO/m8MCK7L06/ZZe1JAbeEO</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=tcp:simran-sqlserver.database.windows.net,1433;Initial Catalog=ASP1_Auth;User ID=Simranjit97;Password=Manthan97" />
+    <AzureDBConnectionStrings Include="Data Source=tcp:simran-sqlserver2.database.windows.net,1433;Initial Catalog=ASP1Data;User ID=Simranjit97;Password=Manthan97" />
+  </ItemGroup>
+</Project>

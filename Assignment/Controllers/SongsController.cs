@@ -13,7 +13,7 @@ namespace Assignment.Controllers
     [Authorize]
     public class SongsController : Controller
     {
-        private Database1Entities db = new Database1Entities();
+        private ASP1DataEntities db = new ASP1DataEntities();
 
         // GET: Songs
         public ActionResult Index()
