@@ -58,11 +58,11 @@ namespace Assignment
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = System.Web.Configuration.WebConfigurationManager.AppSettings["ClientId"],
+                ClientSecret = System.Web.Configuration.WebConfigurationManager.AppSettings["ClientSecret"]
+            });
         }
     }
 }
