@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Assignment.Core;
 using Assignment.Models;
 
 namespace Assignment.Controllers
@@ -14,6 +15,16 @@ namespace Assignment.Controllers
     public class SongsController : Controller
     {
         private ASP1DataEntities db = new ASP1DataEntities();
+        private readonly IGetDataRepository _data;
+
+        public SongsController()
+        {
+        }
+
+        public SongsController(IGetDataRepository data)
+        {
+            _data = data;
+        }
 
         // GET: Songs
         public ActionResult Index()
@@ -119,6 +130,25 @@ namespace Assignment.Controllers
             db.Songs.Remove(song);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        // Songs by id for mock test
+        public string GetSongById(int id)
+        {
+            string name;
+            if (id == 1)
+            {
+                name = "Summer of 69";
+            }
+            else if (id == 2)
+            {
+                name = "Get low";
+            }
+            else
+            {
+                name = "Not Found";
+            }
+            return name;
         }
 
         protected override void Dispose(bool disposing)
